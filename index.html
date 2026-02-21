@@ -1097,16 +1097,81 @@
     @media (max-width: 768px) {
       .nav-links, .nav-cta .btn-outline-dark { display: none; }
       .hamburger { display: flex; }
-      .hero { padding: 120px 0 72px; }
+
+      /* Hero */
+      .hero { padding: 110px 0 64px; }
+      .hero-stats { gap: 16px; flex-wrap: wrap; }
+      .hero-stats .stat-item { min-width: calc(50% - 8px); }
+      .workflow-card { padding: 20px; }
+      .wf-metrics { grid-template-columns: repeat(3, 1fr); font-size: 11px; }
+
+      /* Section padding */
+      .solutions  { padding: 64px 0; }
+      .process    { padding: 64px 0; }
+      .benefits   { padding: 64px 0; }
+      .testimonials { padding: 64px 0; }
+      .faq        { padding: 64px 0; }
+      .cta-section { padding: 64px 0; }
+      .contact    { padding: 64px 0; }
+
+      /* Tabs */
+      .solutions-tabs { flex-wrap: wrap; }
+      .solutions-tabs .tab-btn { flex: 1; min-width: 140px; text-align: center; }
+
+      /* Grids */
       .tab-content.active { grid-template-columns: 1fr; }
       .testi-grid { grid-template-columns: 1fr; }
       .contact-inner { grid-template-columns: 1fr; }
       .form-row { grid-template-columns: 1fr; }
       .footer-inner { grid-template-columns: 1fr; gap: 28px; }
       .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
-      .hero-stats { gap: 20px; }
       .stats-grid { grid-template-columns: 1fr 1fr; }
       .steps { grid-template-columns: 1fr; }
+
+      /* Contact form */
+      .contact-form { padding: 22px; }
+
+      /* CTA buttons full-width on mobile */
+      .cta-actions { flex-direction: column; align-items: stretch; }
+      .cta-actions .btn { justify-content: center; width: 100%; }
+    }
+
+    @media (max-width: 480px) {
+      .container { padding: 0 16px; }
+
+      /* Hero */
+      .hero { padding: 96px 0 52px; }
+      .hero h1 { font-size: 30px; letter-spacing: -0.5px; }
+      .hero-sub { font-size: 15px; }
+      .hero-badge { font-size: 11px; padding: 6px 10px; }
+      .hero-ctas { flex-direction: column; }
+      .hero-ctas .btn { justify-content: center; width: 100%; }
+      .hero-stats .stat-item { min-width: calc(50% - 8px); }
+
+      /* Workflow card */
+      .wf-metrics { grid-template-columns: 1fr 1fr; }
+      .wf-metrics > :last-child { grid-column: 1 / -1; }
+
+      /* Section titles */
+      .section-title { font-size: 26px; }
+      .process-title { font-size: 26px; }
+
+      /* Stats */
+      .big-stat .num { font-size: 34px; }
+      .stats-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+      .big-stat { padding: 20px 14px; }
+
+      /* Buttons */
+      .btn { font-size: 14px; padding: 12px 20px; }
+
+      /* Contact form */
+      .contact-form { padding: 18px; }
+
+      /* Footer */
+      .footer-bottom { font-size: 11px; }
+
+      /* Process steps */
+      .step { padding: 0 8px; }
     }
   </style>
 </head>
