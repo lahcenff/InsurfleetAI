@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="320" height="72" viewBox="0 0 320 72" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Icon background gradient -->
+    <linearGradient id="navyBg" x1="0" y1="0" x2="0.8" y2="1">
+      <stop offset="0%" stop-color="#0d1b3e"/>
+      <stop offset="100%" stop-color="#0a1128"/>
+    </linearGradient>
+    <!-- Teal–blue gradient (accent line + A letter) -->
+    <linearGradient id="tealGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#06c0d4"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+    <!-- Subtle inner glow filter for the icon -->
+    <filter id="iconGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="4" result="blur"/>
+      <feFlood flood-color="#06c0d4" flood-opacity="0.18" result="color"/>
+      <feComposite in="color" in2="blur" operator="in" result="glow"/>
+      <feMerge>
+        <feMergeNode in="glow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- ── ICON MARK ──────────────────────────────────────────── -->
+
+  <!-- Rounded square background -->
+  <rect x="4" y="4" width="64" height="64" rx="14" fill="url(#navyBg)" filter="url(#iconGlow)"/>
+
+  <!-- Subtle teal border -->
+  <rect x="4" y="4" width="64" height="64" rx="14"
+        fill="none" stroke="#06c0d4" stroke-opacity="0.22" stroke-width="1.2"/>
+
+  <!-- Top accent bar (gradient) -->
+  <rect x="4" y="4" width="64" height="3.5" rx="1.75" fill="url(#tealGrad)"/>
+
+  <!-- IA monogram — centered in the 64×64 icon (origin x=4) -->
+  <!-- "I" — white -->
+  <!-- top cap -->
+  <rect x="18" y="19" width="13" height="4"  rx="2" fill="white"/>
+  <!-- stem -->
+  <rect x="22" y="23" width="5"  height="22" rx="2" fill="white"/>
+  <!-- bottom cap -->
+  <rect x="18" y="45" width="13" height="4"  rx="2" fill="white"/>
+
+  <!-- "A" — teal gradient, drawn with paths -->
+  <!-- Left leg -->
+  <path d="M 46 19 L 36 49 L 40.5 49 L 48.5 24 Z" fill="#06c0d4"/>
+  <!-- Right leg -->
+  <path d="M 46 19 L 56 49 L 60.5 49 L 50.5 24 Z" fill="#06c0d4"/>
+  <!-- Crossbar (white so it shows clean) -->
+  <rect x="38.5" y="37" width="15" height="4" rx="2" fill="white" opacity="0.9"/>
+
+  <!-- Small teal dot — bottom right of icon — decorative accent -->
+  <circle cx="61" cy="61" r="3" fill="#06c0d4" opacity="0.5"/>
+
+  <!-- ── WORDMARK ──────────────────────────────────────────────── -->
+
+  <!-- "InsurFleet AI" — one text block, tspans handle the teal "AI" -->
+  <text
+    x="84" y="38"
+    font-family="'Helvetica Neue', 'Arial', sans-serif"
+    font-size="22" font-weight="800"
+    letter-spacing="-0.8"
+    fill="#0a1128">
+    InsurFleet <tspan fill="url(#tealGrad)">AI</tspan>
+  </text>
+
+  <!-- Tagline -->
+  <text
+    x="84" y="54"
+    font-family="'Helvetica Neue', 'Arial', sans-serif"
+    font-size="8.5" font-weight="600"
+    letter-spacing="3"
+    fill="#94a3b8">AUTOMATION SOLUTIONS</text>
+
+</svg>

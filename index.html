@@ -1,0 +1,1881 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>InsurFleet AI – Automatisation IA pour la Flotte &amp; l'Assurance</title>
+  <meta name="description" content="InsurFleet AI connecte vos outils et déploie des agents IA pour éliminer les tâches répétitives en gestion de flotte automobile et courtage en assurance." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    /* ─── Reset & Base ─────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy:   #0a1128;
+      --navy2:  #0f1d3a;
+      --teal:   #06c0d4;
+      --teal2:  #04a3b5;
+      --blue:   #2563eb;
+      --blue2:  #1d4ed8;
+      --light:  #f0f6ff;
+      --white:  #ffffff;
+      --text:   #0f172a;
+      --muted:  #64748b;
+      --border: #e2e8f0;
+      --card:   #f8fafc;
+      --grad:   linear-gradient(135deg, var(--navy) 0%, #0d2147 100%);
+      --glow:   0 0 40px rgba(6,192,212,0.20);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a { text-decoration: none; color: inherit; }
+    img { display: block; max-width: 100%; }
+
+    /* ─── Utility ───────────────────────────────────────────────── */
+    .container {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .section-label {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 16px;
+    }
+
+    .section-label.dark { color: var(--teal); }
+    .section-label.light { color: var(--teal); }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 50px;
+      font-size: 13px;
+      font-weight: 500;
+      border: 1px solid var(--border);
+      background: var(--white);
+      color: var(--text);
+    }
+
+    .pill.active {
+      background: #eff6ff;
+      border-color: #bfdbfe;
+      color: var(--blue);
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 12px;
+      border-radius: 50px;
+      font-size: 12px;
+      font-weight: 600;
+      background: rgba(6,192,212,0.12);
+      color: var(--teal2);
+      border: 1px solid rgba(6,192,212,0.25);
+      margin-bottom: 20px;
+    }
+
+    .badge-dot {
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: var(--teal);
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50%       { opacity: .6; transform: scale(1.3); }
+    }
+
+    /* ─── Buttons ───────────────────────────────────────────────── */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 28px;
+      border-radius: 10px;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      border: none;
+      transition: all .22s ease;
+    }
+
+    .btn-primary {
+      background: var(--blue);
+      color: var(--white);
+      box-shadow: 0 4px 20px rgba(37,99,235,.30);
+    }
+    .btn-primary:hover {
+      background: var(--blue2);
+      box-shadow: 0 6px 28px rgba(37,99,235,.45);
+      transform: translateY(-1px);
+    }
+
+    .btn-teal {
+      background: var(--teal);
+      color: var(--navy);
+      box-shadow: 0 4px 20px rgba(6,192,212,.30);
+    }
+    .btn-teal:hover {
+      background: var(--teal2);
+      transform: translateY(-1px);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--white);
+      border: 1.5px solid rgba(255,255,255,.3);
+    }
+    .btn-outline:hover {
+      background: rgba(255,255,255,.08);
+      border-color: rgba(255,255,255,.6);
+    }
+
+    .btn-outline-dark {
+      background: transparent;
+      color: var(--text);
+      border: 1.5px solid var(--border);
+    }
+    .btn-outline-dark:hover {
+      background: var(--light);
+      border-color: #c7d8f0;
+    }
+
+    /* ─── NAVBAR ────────────────────────────────────────────────── */
+    .navbar {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      background: rgba(255,255,255,.92);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+      transition: box-shadow .3s;
+    }
+    .navbar.scrolled { box-shadow: 0 4px 24px rgba(0,0,0,.08); }
+
+    .navbar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 68px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .logo img { height: 44px; width: auto; }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+    .nav-links a {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--muted);
+      transition: color .2s;
+    }
+    .nav-links a:hover { color: var(--text); }
+
+    .nav-cta { display: flex; align-items: center; gap: 12px; }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 4px;
+    }
+    .hamburger span {
+      display: block;
+      width: 24px; height: 2px;
+      background: var(--text);
+      border-radius: 2px;
+      transition: all .3s;
+    }
+
+    /* ─── HERO ──────────────────────────────────────────────────── */
+    .hero {
+      background: var(--grad);
+      padding: 148px 0 100px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 600px 500px at 70% 50%, rgba(6,192,212,.10) 0%, transparent 70%),
+        radial-gradient(ellipse 400px 400px at 10% 80%, rgba(37,99,235,.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    /* grid lines */
+    .hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
+      background-size: 50px 50px;
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 14px;
+      border-radius: 50px;
+      font-size: 12px;
+      font-weight: 600;
+      background: rgba(6,192,212,.15);
+      color: var(--teal);
+      border: 1px solid rgba(6,192,212,.3);
+      margin-bottom: 24px;
+    }
+
+    .hero h1 {
+      font-size: clamp(36px, 4.5vw, 58px);
+      font-weight: 800;
+      line-height: 1.12;
+      color: var(--white);
+      letter-spacing: -1.5px;
+      margin-bottom: 22px;
+    }
+
+    .hero h1 .hl-teal { color: var(--teal); }
+    .hero h1 .hl-blue { color: #93c5fd; }
+
+    .hero-sub {
+      font-size: 17px;
+      color: rgba(255,255,255,.72);
+      line-height: 1.7;
+      max-width: 480px;
+      margin-bottom: 36px;
+    }
+
+    .hero-ctas {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 32px;
+      margin-top: 48px;
+      padding-top: 32px;
+      border-top: 1px solid rgba(255,255,255,.10);
+    }
+
+    .stat-item {}
+    .stat-num {
+      font-size: 26px;
+      font-weight: 800;
+      color: var(--white);
+      letter-spacing: -0.5px;
+    }
+    .stat-num span { color: var(--teal); }
+    .stat-label {
+      font-size: 12px;
+      color: rgba(255,255,255,.5);
+      margin-top: 2px;
+    }
+
+    /* ─── Workflow Card ─────────────────────────────────────────── */
+    .workflow-card {
+      background: rgba(255,255,255,.05);
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 20px;
+      padding: 28px;
+      backdrop-filter: blur(20px);
+      box-shadow: 0 24px 64px rgba(0,0,0,.35), var(--glow);
+    }
+
+    .wf-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 22px;
+    }
+
+    .wf-icon {
+      width: 40px; height: 40px;
+      border-radius: 10px;
+      background: rgba(6,192,212,.2);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px;
+    }
+
+    .wf-title { font-size: 14px; font-weight: 700; color: var(--white); }
+    .wf-sub   { font-size: 12px; color: rgba(255,255,255,.4); }
+
+    .wf-steps { display: flex; flex-direction: column; gap: 10px; }
+
+    .wf-step {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 14px;
+      border-radius: 10px;
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.08);
+      font-size: 13px;
+      font-weight: 500;
+      color: rgba(255,255,255,.75);
+      transition: all .3s;
+      animation: fadeSlide .5s ease both;
+    }
+
+    .wf-step.done  { background: rgba(6,192,212,.12); border-color: rgba(6,192,212,.25); }
+    .wf-step.done .wf-step-icon  { color: var(--teal); }
+    .wf-step.active { background: rgba(37,99,235,.15); border-color: rgba(37,99,235,.3); }
+    .wf-step.active .wf-step-icon { color: #60a5fa; }
+
+    .wf-step:nth-child(1) { animation-delay: .1s; }
+    .wf-step:nth-child(2) { animation-delay: .25s; }
+    .wf-step:nth-child(3) { animation-delay: .4s; }
+    .wf-step:nth-child(4) { animation-delay: .55s; }
+
+    @keyframes fadeSlide {
+      from { opacity: 0; transform: translateX(12px); }
+      to   { opacity: 1; transform: translateX(0); }
+    }
+
+    .wf-step-icon { font-size: 15px; }
+
+    .wf-metrics {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-top: 18px;
+      padding-top: 18px;
+      border-top: 1px solid rgba(255,255,255,.08);
+    }
+
+    .wf-metric {
+      text-align: center;
+      padding: 10px 6px;
+      background: rgba(255,255,255,.04);
+      border-radius: 10px;
+    }
+    .wf-metric-val {
+      font-size: 18px; font-weight: 800;
+      color: var(--teal);
+      letter-spacing: -0.5px;
+    }
+    .wf-metric-label {
+      font-size: 10px;
+      color: rgba(255,255,255,.4);
+      margin-top: 2px;
+      line-height: 1.3;
+    }
+
+    /* ─── NICHES STRIP ──────────────────────────────────────────── */
+    .niches-strip {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      padding: 18px 0;
+    }
+    .niches-inner {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .niches-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    /* ─── SOLUTIONS ─────────────────────────────────────────────── */
+    .solutions { padding: 96px 0; background: var(--white); }
+
+    .solutions-header {
+      text-align: center;
+      max-width: 640px;
+      margin: 0 auto 64px;
+    }
+
+    .section-title {
+      font-size: clamp(28px, 3.5vw, 42px);
+      font-weight: 800;
+      color: var(--text);
+      letter-spacing: -1px;
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+
+    .section-sub {
+      font-size: 16px;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .solutions-tabs {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 52px;
+    }
+
+    .tab-btn {
+      padding: 10px 22px;
+      border-radius: 50px;
+      font-size: 14px;
+      font-weight: 600;
+      border: 1.5px solid var(--border);
+      background: none;
+      cursor: pointer;
+      color: var(--muted);
+      transition: all .22s;
+    }
+
+    .tab-btn.active {
+      background: var(--navy);
+      color: var(--white);
+      border-color: var(--navy);
+    }
+
+    .tab-content { display: none; }
+    .tab-content.active { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+
+    .sol-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 30px;
+      transition: all .25s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .sol-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--teal), var(--blue));
+      opacity: 0;
+      transition: opacity .25s;
+    }
+
+    .sol-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 40px rgba(0,0,0,.09);
+      border-color: #c7d8f0;
+    }
+    .sol-card:hover::before { opacity: 1; }
+
+    .sol-icon {
+      width: 50px; height: 50px;
+      border-radius: 14px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 22px;
+      margin-bottom: 18px;
+      background: var(--light);
+    }
+
+    .sol-card h3 {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 10px;
+    }
+
+    .sol-card p {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.65;
+      margin-bottom: 16px;
+    }
+
+    .sol-features { list-style: none; }
+    .sol-features li {
+      font-size: 13px;
+      color: var(--text);
+      padding: 4px 0;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+    .sol-features li::before {
+      content: '✓';
+      color: var(--teal2);
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    /* ─── PROCESS ───────────────────────────────────────────────── */
+    .process {
+      background: var(--navy);
+      padding: 96px 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .process::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 500px 400px at 80% 20%, rgba(6,192,212,.07) 0%, transparent 70%),
+        radial-gradient(ellipse 400px 400px at 20% 80%, rgba(37,99,235,.08) 0%, transparent 70%);
+    }
+
+    .process-header {
+      text-align: center;
+      margin-bottom: 64px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .process-title {
+      font-size: clamp(28px, 3.5vw, 42px);
+      font-weight: 800;
+      color: var(--white);
+      letter-spacing: -1px;
+      margin-bottom: 12px;
+    }
+
+    .process-sub { font-size: 16px; color: rgba(255,255,255,.55); }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      position: relative;
+      z-index: 2;
+    }
+
+    .steps::before {
+      content: '';
+      position: absolute;
+      top: 30px;
+      left: calc(12.5% + 8px);
+      right: calc(12.5% + 8px);
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(6,192,212,.4), rgba(37,99,235,.4), transparent);
+    }
+
+    .step {
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    .step-num {
+      width: 60px; height: 60px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.06);
+      border: 1.5px solid rgba(6,192,212,.35);
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 22px;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--teal);
+      position: relative;
+      transition: all .3s;
+    }
+
+    .step:hover .step-num {
+      background: rgba(6,192,212,.15);
+      box-shadow: 0 0 20px rgba(6,192,212,.25);
+    }
+
+    .step-emoji { font-size: 22px; }
+
+    .step h4 {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 8px;
+    }
+
+    .step p {
+      font-size: 13px;
+      color: rgba(255,255,255,.5);
+      line-height: 1.65;
+    }
+
+    /* ─── BENEFITS ──────────────────────────────────────────────── */
+    .benefits { padding: 96px 0; background: var(--light); }
+
+    .benefits-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+
+    .benefits-left .section-label { display: block; }
+
+    .benefits-left h2 {
+      font-size: clamp(28px, 3vw, 40px);
+      font-weight: 800;
+      color: var(--text);
+      letter-spacing: -1px;
+      line-height: 1.2;
+      margin-bottom: 18px;
+    }
+
+    .benefits-left p {
+      font-size: 16px;
+      color: var(--muted);
+      line-height: 1.7;
+      margin-bottom: 32px;
+    }
+
+    .benefit-items { display: flex; flex-direction: column; gap: 18px; }
+
+    .benefit-item {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+
+    .benefit-icon {
+      width: 44px; height: 44px;
+      border-radius: 12px;
+      background: var(--white);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px;
+      box-shadow: 0 2px 8px rgba(0,0,0,.06);
+      flex-shrink: 0;
+    }
+
+    .benefit-text h4 {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+
+    .benefit-text p { font-size: 13px; color: var(--muted); }
+
+    /* Big stats */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .big-stat {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 28px;
+      text-align: center;
+      transition: all .25s;
+    }
+
+    .big-stat:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 32px rgba(0,0,0,.08);
+    }
+
+    .big-stat .num {
+      font-size: 42px;
+      font-weight: 900;
+      letter-spacing: -2px;
+      background: linear-gradient(135deg, var(--navy), var(--teal2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .big-stat .label {
+      font-size: 13px;
+      color: var(--muted);
+      font-weight: 500;
+      line-height: 1.4;
+    }
+
+    /* ─── TESTIMONIALS ──────────────────────────────────────────── */
+    .testimonials { padding: 96px 0; background: var(--white); }
+
+    .testimonials-header {
+      text-align: center;
+      max-width: 540px;
+      margin: 0 auto 56px;
+    }
+
+    .testi-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .testi-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 28px;
+      transition: all .25s;
+    }
+
+    .testi-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 32px rgba(0,0,0,.07);
+    }
+
+    .stars { color: #f59e0b; font-size: 13px; letter-spacing: 1px; margin-bottom: 14px; }
+
+    .testi-text {
+      font-size: 14px;
+      color: var(--text);
+      line-height: 1.7;
+      font-style: italic;
+      margin-bottom: 20px;
+    }
+
+    .testi-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .author-avatar {
+      width: 42px; height: 42px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--teal), var(--blue));
+      display: flex; align-items: center; justify-content: center;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--white);
+      flex-shrink: 0;
+    }
+
+    .author-name { font-size: 14px; font-weight: 700; color: var(--text); }
+    .author-role { font-size: 12px; color: var(--muted); }
+
+    /* ─── FAQ ───────────────────────────────────────────────────── */
+    .faq { padding: 96px 0; background: var(--light); }
+
+    .faq-header {
+      text-align: center;
+      max-width: 540px;
+      margin: 0 auto 56px;
+    }
+
+    .faq-list { max-width: 720px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; }
+
+    .faq-item {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+    }
+
+    .faq-question {
+      padding: 20px 24px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text);
+      transition: background .2s;
+      user-select: none;
+    }
+
+    .faq-question:hover { background: var(--light); }
+
+    .faq-arrow {
+      font-size: 18px;
+      color: var(--muted);
+      transition: transform .3s;
+    }
+
+    .faq-item.open .faq-arrow { transform: rotate(180deg); }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .4s ease;
+    }
+
+    .faq-answer-inner {
+      padding: 0 24px 20px;
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    /* ─── CTA SECTION ───────────────────────────────────────────── */
+    .cta-section {
+      background: var(--grad);
+      padding: 96px 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 600px 400px at 50% 50%, rgba(6,192,212,.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .cta-section::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
+      background-size: 50px 50px;
+      pointer-events: none;
+    }
+
+    .cta-inner { position: relative; z-index: 2; }
+
+    .cta-section h2 {
+      font-size: clamp(28px, 4vw, 50px);
+      font-weight: 800;
+      color: var(--white);
+      letter-spacing: -1.5px;
+      max-width: 700px;
+      margin: 0 auto 16px;
+      line-height: 1.12;
+    }
+
+    .cta-section h2 span { color: var(--teal); }
+
+    .cta-section p {
+      font-size: 17px;
+      color: rgba(255,255,255,.65);
+      margin-bottom: 40px;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .cta-actions { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; }
+
+    /* ─── CONTACT FORM ──────────────────────────────────────────── */
+    .contact { padding: 96px 0; background: var(--white); }
+
+    .contact-inner {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 64px;
+      align-items: start;
+    }
+
+    .contact-left h2 {
+      font-size: clamp(26px, 3vw, 38px);
+      font-weight: 800;
+      color: var(--text);
+      letter-spacing: -1px;
+      margin-bottom: 16px;
+      line-height: 1.2;
+    }
+
+    .contact-left p {
+      font-size: 15px;
+      color: var(--muted);
+      line-height: 1.7;
+      margin-bottom: 32px;
+    }
+
+    .contact-info { display: flex; flex-direction: column; gap: 14px; }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 14px;
+      color: var(--text);
+    }
+
+    .contact-item-icon {
+      width: 38px; height: 38px;
+      border-radius: 10px;
+      background: var(--light);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 16px;
+      flex-shrink: 0;
+    }
+
+    .contact-form {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 36px;
+    }
+
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-bottom: 16px;
+    }
+
+    .form-group.full { grid-column: 1 / -1; }
+
+    .form-label {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .form-input, .form-select, .form-textarea {
+      padding: 12px 14px;
+      border-radius: 10px;
+      border: 1.5px solid var(--border);
+      background: var(--white);
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      color: var(--text);
+      transition: border-color .2s, box-shadow .2s;
+      outline: none;
+    }
+
+    .form-input:focus, .form-select:focus, .form-textarea:focus {
+      border-color: var(--teal2);
+      box-shadow: 0 0 0 3px rgba(6,192,212,.12);
+    }
+
+    .form-textarea { min-height: 100px; resize: vertical; }
+
+    .form-submit {
+      width: 100%;
+      padding: 14px;
+      font-size: 15px;
+      font-weight: 700;
+      justify-content: center;
+    }
+
+    /* ─── FOOTER ────────────────────────────────────────────────── */
+    footer {
+      background: var(--navy);
+      padding: 60px 0 32px;
+    }
+
+    .footer-inner {
+      display: grid;
+      grid-template-columns: 1.6fr 1fr 1fr 1fr;
+      gap: 40px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+      margin-bottom: 28px;
+    }
+
+    .footer-brand img { height: 42px; margin-bottom: 14px; }
+
+    .footer-brand p {
+      font-size: 13px;
+      color: rgba(255,255,255,.45);
+      line-height: 1.65;
+      max-width: 260px;
+    }
+
+    .footer-col h5 {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.35);
+      margin-bottom: 16px;
+    }
+
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+
+    .footer-col ul li a {
+      font-size: 13px;
+      color: rgba(255,255,255,.55);
+      transition: color .2s;
+    }
+
+    .footer-col ul li a:hover { color: var(--teal); }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12px;
+      color: rgba(255,255,255,.3);
+    }
+
+    .footer-links { display: flex; gap: 20px; }
+    .footer-links a { color: rgba(255,255,255,.3); transition: color .2s; }
+    .footer-links a:hover { color: rgba(255,255,255,.6); }
+
+    /* ─── Mobile menu ───────────────────────────────────────────── */
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 68px; left: 0; right: 0;
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      padding: 20px 24px;
+      flex-direction: column;
+      gap: 14px;
+      z-index: 999;
+      box-shadow: 0 12px 32px rgba(0,0,0,.08);
+    }
+
+    .mobile-menu.open { display: flex; }
+
+    .mobile-menu a {
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--text);
+      padding: 8px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    /* ─── Animations ────────────────────────────────────────────── */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity .6s ease, transform .6s ease;
+    }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+    /* ─── RESPONSIVE ────────────────────────────────────────────── */
+    @media (max-width: 1024px) {
+      .hero-inner { grid-template-columns: 1fr; gap: 48px; }
+      .workflow-card { max-width: 520px; }
+      .steps { grid-template-columns: repeat(2, 1fr); gap: 32px; }
+      .steps::before { display: none; }
+      .benefits-inner { grid-template-columns: 1fr; }
+      .testi-grid { grid-template-columns: 1fr 1fr; }
+      .footer-inner { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links, .nav-cta .btn-outline-dark { display: none; }
+      .hamburger { display: flex; }
+      .hero { padding: 120px 0 72px; }
+      .tab-content.active { grid-template-columns: 1fr; }
+      .testi-grid { grid-template-columns: 1fr; }
+      .contact-inner { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+      .footer-inner { grid-template-columns: 1fr; gap: 28px; }
+      .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+      .hero-stats { gap: 20px; }
+      .stats-grid { grid-template-columns: 1fr 1fr; }
+      .steps { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════ NAVBAR ═══════════════ -->
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <div class="navbar-inner">
+      <a href="#" class="logo">
+        <img src="brands_assets/insurfleet-logo.svg" alt="InsurFleet AI" style="height:48px;" />
+      </a>
+      <ul class="nav-links">
+        <li><a href="#solutions">Solutions</a></li>
+        <li><a href="#process">Notre méthode</a></li>
+        <li><a href="#benefits">Résultats</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="#contact" class="btn btn-outline-dark" style="padding:10px 20px;font-size:14px;">Se connecter</a>
+        <a href="#contact" class="btn btn-primary" style="padding:10px 20px;font-size:14px;">Prendre contact →</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#solutions" onclick="closeMobile()">Solutions</a>
+  <a href="#process" onclick="closeMobile()">Notre méthode</a>
+  <a href="#benefits" onclick="closeMobile()">Résultats</a>
+  <a href="#faq" onclick="closeMobile()">FAQ</a>
+  <a href="#contact" class="btn btn-primary" style="justify-content:center;" onclick="closeMobile()">Prendre contact →</a>
+</div>
+
+<!-- ═══════════════ HERO ═══════════════ -->
+<section class="hero" id="home">
+  <div class="container">
+    <div class="hero-inner">
+      <!-- Left -->
+      <div class="hero-left">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          IA générative · Agents autonomes · Intégration no-code
+        </div>
+
+        <h1>
+          L'automatisation<br />
+          sur mesure pour<br />
+          les pros de la <span class="hl-teal">flotte</span><br />
+          et de l'<span class="hl-blue">assurance</span>.
+        </h1>
+
+        <p class="hero-sub">
+          Nous connectons vos outils et déployons des agents IA pour éliminer
+          les tâches répétitives — pour que vous vous concentriez sur l'essentiel.
+        </p>
+
+        <div class="hero-ctas">
+          <a href="#solutions" class="btn btn-teal">Découvrir nos solutions ↓</a>
+          <a href="#contact" class="btn btn-outline">Prendre contact</a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat-item">
+            <div class="stat-num"><span>−80%</span></div>
+            <div class="stat-label">Tâches manuelles</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">3j<span>→0</span></div>
+            <div class="stat-label">Délai de traitement</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num"><span>24/7</span></div>
+            <div class="stat-label">Surveillance active</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">&lt;<span>3 mois</span></div>
+            <div class="stat-label">Retour sur investissement</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Workflow Card -->
+      <div class="hero-right">
+        <div class="workflow-card">
+          <div class="wf-header">
+            <div class="wf-icon">⚡</div>
+            <div>
+              <div class="wf-title">Workflow automatisé</div>
+              <div class="wf-sub">Gestionnaire de flotte · En cours</div>
+            </div>
+          </div>
+
+          <div class="wf-steps">
+            <div class="wf-step done">
+              <span class="wf-step-icon">✓</span>
+              Alerte maintenance reçue
+            </div>
+            <div class="wf-step done">
+              <span class="wf-step-icon">✓</span>
+              Ticket créé automatiquement
+            </div>
+            <div class="wf-step active" id="activeStep">
+              <span class="wf-step-icon">●</span>
+              Rapport envoyé au manager
+            </div>
+            <div class="wf-step" id="pendingStep">
+              <span class="wf-step-icon">○</span>
+              Suivi fournisseur planifié
+            </div>
+          </div>
+
+          <div class="wf-metrics">
+            <div class="wf-metric">
+              <div class="wf-metric-val">−80%</div>
+              <div class="wf-metric-label">Tâches manuelles</div>
+            </div>
+            <div class="wf-metric">
+              <div class="wf-metric-val">3j→0</div>
+              <div class="wf-metric-label">Délai de traitement</div>
+            </div>
+            <div class="wf-metric">
+              <div class="wf-metric-val">24/7</div>
+              <div class="wf-metric-label">Surveillance active</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ NICHES STRIP ═══════════════ -->
+<div class="niches-strip">
+  <div class="container">
+    <div class="niches-inner">
+      <span class="niches-label">Nos niches</span>
+      <span class="pill active">🚗 Gestion de flotte automobile</span>
+      <span class="pill active">📋 Courtiers en assurance</span>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════ SOLUTIONS ═══════════════ -->
+<section class="solutions" id="solutions">
+  <div class="container">
+    <div class="solutions-header fade-up">
+      <span class="section-label">Nos solutions</span>
+      <h2 class="section-title">Une IA taillée pour votre métier</h2>
+      <p class="section-sub">Des automatisations précises, conçues pour les réalités opérationnelles de la gestion de flotte et du courtage en assurance.</p>
+    </div>
+
+    <div class="solutions-tabs fade-up">
+      <button class="tab-btn active" onclick="switchTab('flotte', this)">🚗 Gestion de flotte</button>
+      <button class="tab-btn" onclick="switchTab('assurance', this)">📋 Courtage en assurance</button>
+    </div>
+
+    <!-- FLOTTE -->
+    <div class="tab-content active" id="tab-flotte">
+      <div class="sol-card fade-up">
+        <div class="sol-icon">🔧</div>
+        <h3>Maintenance préventive automatisée</h3>
+        <p>Détectez les risques avant qu'ils ne deviennent des pannes. Votre agent IA surveille chaque véhicule en continu et déclenche les interventions au bon moment.</p>
+        <ul class="sol-features">
+          <li>Alertes de maintenance intelligentes et priorisées</li>
+          <li>Création automatique de tickets d'intervention</li>
+          <li>Coordination avec vos prestataires agréés</li>
+          <li>Rapports de suivi envoyés aux managers</li>
+        </ul>
+      </div>
+
+      <div class="sol-card fade-up">
+        <div class="sol-icon">🚨</div>
+        <h3>Gestion des sinistres simplifiée</h3>
+        <p>De la déclaration à l'indemnisation, chaque étape est automatisée. Moins d'erreurs, moins d'oublis, des dossiers traités jusqu'à 5× plus vite.</p>
+        <ul class="sol-features">
+          <li>Ouverture automatique des déclarations de sinistre</li>
+          <li>Collecte des pièces justificatives par IA</li>
+          <li>Suivi en temps réel du statut des dossiers</li>
+          <li>Relances automatiques des intervenants</li>
+        </ul>
+      </div>
+
+      <div class="sol-card fade-up">
+        <div class="sol-icon">📊</div>
+        <h3>Reporting IA & tableaux de bord</h3>
+        <p>Vos données de flotte, analysées et synthétisées automatiquement. Chaque matin, vos managers disposent d'un état complet de la flotte sans lever le petit doigt.</p>
+        <ul class="sol-features">
+          <li>Rapports personnalisés générés chaque jour</li>
+          <li>Analyse prédictive des coûts d'entretien</li>
+          <li>Indicateurs de performance par véhicule / parc</li>
+          <li>Export automatique vers vos outils existants</li>
+        </ul>
+      </div>
+
+      <div class="sol-card fade-up">
+        <div class="sol-icon">📋</div>
+        <h3>Conformité réglementaire automatisée</h3>
+        <p>Contrôles techniques, assurances, permis de conduire — chaque échéance est suivie automatiquement. Zéro oubli, zéro amende.</p>
+        <ul class="sol-features">
+          <li>Suivi automatique des échéances légales</li>
+          <li>Alertes préventives avant chaque expiration</li>
+          <li>Archivage et gestion documentaire centralisés</li>
+          <li>Audit de conformité généré à la demande</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ASSURANCE -->
+    <div class="tab-content" id="tab-assurance">
+      <div class="sol-card fade-up">
+        <div class="sol-icon">🎯</div>
+        <h3>Qualification automatique des prospects</h3>
+        <p>Ne perdez plus de temps sur des leads froids. Votre agent IA qualifie, segmente et priorise chaque prospect entrant selon vos critères business.</p>
+        <ul class="sol-features">
+          <li>Scoring automatique des leads entrants</li>
+          <li>Segmentation par type de risque et potentiel</li>
+          <li>Enrichissement automatique des fiches prospects</li>
+          <li>Intégration CRM instantanée</li>
+        </ul>
+      </div>
+
+      <div class="sol-card fade-up">
+        <div class="sol-icon">📄</div>
+        <h3>Génération de devis intelligente</h3>
+        <p>Vos devis générés en quelques secondes, personnalisés et conformes. L'IA exploite les données du client pour proposer la meilleure couverture au meilleur prix.</p>
+        <ul class="sol-features">
+          <li>Comparaison multi-compagnies automatisée</li>
+          <li>Devis personnalisés générés en temps réel</li>
+          <li>Envoi automatique avec relance intégrée</li>
+          <li>Suivi du taux de conversion par produit</li>
+        </ul>
+      </div>
+
+      <div class="sol-card fade-up">
+        <div class="sol-icon">🔔</div>
+        <h3>Relances & suivi client automatisés</h3>
+        <p>Aucun prospect ou client ne passe à travers les mailles. Chaque contrat, chaque renouvellement, chaque opportunité est suivi par votre agent IA.</p>
+        <ul class="sol-features">
+          <li>Séquences de relance multicanal (email, SMS)</li>
+          <li>Rappels de renouvellement avant échéance</li>
+          <li>Détection des opportunités d'upsell</li>
+          <li>Satisfaction client mesurée automatiquement</li>
+        </ul>
+      </div>
+
+      <div class="sol-card fade-up">
+        <div class="sol-icon">📈</div>
+        <h3>Pilotage de la production</h3>
+        <p>Un tableau de bord complet de votre activité courtage, mis à jour en temps réel. Chiffre d'affaires, commissions, sinistralité — tout en un coup d'œil.</p>
+        <ul class="sol-features">
+          <li>Dashboard de production en temps réel</li>
+          <li>Rapports de commissionnement automatiques</li>
+          <li>Analyse de la sinistralité par portefeuille</li>
+          <li>Prévisions d'activité basées sur l'IA</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ PROCESS ═══════════════ -->
+<section class="process" id="process">
+  <div class="container">
+    <div class="process-header fade-up">
+      <span class="section-label">Notre méthode</span>
+      <h2 class="process-title">Opérationnel en 4 étapes</h2>
+      <p class="process-sub">De l'audit initial à l'optimisation continue — un déploiement sans friction.</p>
+    </div>
+
+    <div class="steps">
+      <div class="step fade-up">
+        <div class="step-num"><span class="step-emoji">🔍</span></div>
+        <h4>Audit de vos processus</h4>
+        <p>Nous cartographions vos flux de travail existants, identifions les goulots d'étranglement et ciblons les 20% de tâches qui consomment 80% de votre temps.</p>
+      </div>
+      <div class="step fade-up">
+        <div class="step-num"><span class="step-emoji">⚙️</span></div>
+        <h4>Configuration des agents IA</h4>
+        <p>Nos ingénieurs déploient des agents IA personnalisés, connectés à vos outils (CRM, ERP, TMS) via des intégrations sécurisées et testées.</p>
+      </div>
+      <div class="step fade-up">
+        <div class="step-num"><span class="step-emoji">🚀</span></div>
+        <h4>Mise en production</h4>
+        <p>Déploiement progressif pour garantir zéro interruption de service. Vos équipes sont formées en moins d'une journée. Les automatisations tournent dès J+1.</p>
+      </div>
+      <div class="step fade-up">
+        <div class="step-num"><span class="step-emoji">📈</span></div>
+        <h4>Optimisation continue</h4>
+        <p>Nous surveillons les performances, affinons les agents et ajoutons de nouveaux automatismes au fil de la croissance de votre activité.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ BENEFITS ═══════════════ -->
+<section class="benefits" id="benefits">
+  <div class="container">
+    <div class="benefits-inner">
+      <!-- Left -->
+      <div class="benefits-left fade-up">
+        <span class="section-label">Pourquoi InsurFleet AI</span>
+        <h2>Des résultats mesurables dès le premier mois</h2>
+        <p>Nous ne vendons pas des promesses. Nos clients constatent des gains concrets sur leurs opérations quotidiennes en quelques semaines.</p>
+
+        <div class="benefit-items">
+          <div class="benefit-item">
+            <div class="benefit-icon">⚡</div>
+            <div class="benefit-text">
+              <h4>Déploiement rapide</h4>
+              <p>Mise en production en 2 à 4 semaines, sans projet IT lourd ni refonte de votre système d'information.</p>
+            </div>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-icon">🔌</div>
+            <div class="benefit-text">
+              <h4>Compatible avec vos outils</h4>
+              <p>Nous nous connectons à ce que vous utilisez déjà : Salesforce, HubSpot, Google Workspace, Slack, SAP et bien d'autres.</p>
+            </div>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-icon">🛡️</div>
+            <div class="benefit-text">
+              <h4>Sécurité & conformité RGPD</h4>
+              <p>Architecture hébergée en France, données chiffrées, conformité RGPD garantie. Vos données ne quittent jamais votre périmètre sécurisé.</p>
+            </div>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-icon">🤝</div>
+            <div class="benefit-text">
+              <h4>Accompagnement dédié</h4>
+              <p>Un expert InsurFleet AI dédié à votre compte, joignable à tout moment. Pas de ticket support — un partenaire de confiance.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Big stats -->
+      <div class="benefits-right fade-up">
+        <div class="stats-grid">
+          <div class="big-stat">
+            <div class="num">−80%</div>
+            <div class="label">Réduction des tâches manuelles répétitives</div>
+          </div>
+          <div class="big-stat">
+            <div class="num">5×</div>
+            <div class="label">Plus rapide sur le traitement des sinistres</div>
+          </div>
+          <div class="big-stat">
+            <div class="num">0</div>
+            <div class="label">Échéances oubliées grâce au suivi IA continu</div>
+          </div>
+          <div class="big-stat">
+            <div class="num">&lt;3 mois</div>
+            <div class="label">Retour sur investissement constaté</div>
+          </div>
+        </div>
+
+        <div style="margin-top:20px;background:var(--navy);border-radius:16px;padding:22px 24px;display:flex;align-items:center;gap:16px;">
+          <span style="font-size:28px;">💬</span>
+          <div>
+            <div style="font-size:14px;color:rgba(255,255,255,.85);line-height:1.5;font-style:italic;">"InsurFleet AI a transformé notre gestion de flotte. Nos coordinateurs gagnent 2 heures par jour et les sinistres sont traités en 24h au lieu de 5 jours."</div>
+            <div style="margin-top:8px;font-size:12px;color:rgba(255,255,255,.4);">Un professionnel de la gestion de flotte</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ TESTIMONIALS ═══════════════ -->
+<section class="testimonials" id="testimonials">
+  <div class="container">
+    <div class="testimonials-header fade-up">
+      <span class="section-label">Témoignages</span>
+      <h2 class="section-title">Ce que disent nos clients</h2>
+      <p class="section-sub">Des professionnels de la flotte et du courtage qui ont fait confiance à InsurFleet AI.</p>
+    </div>
+
+    <div class="testi-grid">
+      <div class="testi-card fade-up">
+        <div class="stars">★★★★★</div>
+        <p class="testi-text">"La gestion des alertes de maintenance était un calvaire. Aujourd'hui, tout est automatique. Nos équipes reçoivent les bons de travail sans qu'on ait à intervenir. Impressionnant."</p>
+        <div class="testi-author">
+          <div class="author-avatar">👤</div>
+          <div>
+            <div class="author-name">Un professionnel de la gestion de flotte</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi-card fade-up">
+        <div class="stars">★★★★★</div>
+        <p class="testi-text">"Le suivi des renouvellements était notre plus gros point noir. InsurFleet AI a automatisé toutes les relances. Notre taux de fidélisation a nettement progressé."</p>
+        <div class="testi-author">
+          <div class="author-avatar">👤</div>
+          <div>
+            <div class="author-name">Un courtier en assurances</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi-card fade-up">
+        <div class="stars">★★★★★</div>
+        <p class="testi-text">"Déploiement rapide, ROI positif dès le deuxième mois. L'équipe InsurFleet AI est réactive et vraiment à l'écoute de nos besoins métier. Je recommande sans hésitation."</p>
+        <div class="testi-author">
+          <div class="author-avatar">👤</div>
+          <div>
+            <div class="author-name">Un responsable dans le transport</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ FAQ ═══════════════ -->
+<section class="faq" id="faq">
+  <div class="container">
+    <div class="faq-header fade-up">
+      <span class="section-label">Questions fréquentes</span>
+      <h2 class="section-title">Tout ce que vous voulez savoir</h2>
+    </div>
+
+    <div class="faq-list">
+      <div class="faq-item fade-up">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          Combien de temps faut-il pour déployer les automatisations ?
+          <span class="faq-arrow">↓</span>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            La durée de déploiement dépend de la complexité de vos processus et du nombre d'intégrations nécessaires. En moyenne, nos clients sont opérationnels en <strong>2 à 4 semaines</strong>. Nous procédons par étapes pour garantir zéro interruption de service.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item fade-up">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          Faut-il changer nos outils existants ?
+          <span class="faq-arrow">↓</span>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            Absolument pas. InsurFleet AI se connecte à vos outils existants : CRM, ERP, logiciels de gestion de flotte, outils métier spécifiques. Nous construisons des ponts entre vos systèmes sans imposer de migration ou de changement technologique.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item fade-up">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          La solution est-elle conforme au RGPD ?
+          <span class="faq-arrow">↓</span>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            Oui. Notre infrastructure est hébergée sur des serveurs en France. Les données de vos clients et collaborateurs sont chiffrées, anonymisées lorsque nécessaire, et ne sont jamais partagées avec des tiers. Un DPA (Data Processing Agreement) est signé avec chaque client.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item fade-up">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          Quel est le modèle tarifaire ?
+          <span class="faq-arrow">↓</span>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            Nous proposons un abonnement mensuel basé sur le volume d'automatisations déployées et le nombre d'agents IA actifs. Les frais d'intégration initiale sont fixes et communiqués lors du premier rendez-vous. Pas de surprise, pas de coût caché.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item fade-up">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          Quelle assistance est incluse ?
+          <span class="faq-arrow">↓</span>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            Chaque client dispose d'un Customer Success Manager dédié, joignable par email, téléphone et visioconférence. Nous réalisons des bilans mensuels et proposons des ajustements continus pour optimiser les performances de vos agents IA.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item fade-up">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          InsurFleet AI est-il adapté aux PME ?
+          <span class="faq-arrow">↓</span>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            Oui, nous travaillons avec des entreprises de toutes tailles — de la PME avec 20 véhicules au groupe gérant plusieurs centaines de contrats d'assurance. Nos solutions sont modulaires et s'adaptent à votre volume d'activité et à votre budget.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ CTA ═══════════════ -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-inner fade-up">
+      <span class="section-label light">Passez à l'action</span>
+      <h2>Prêt à automatiser votre<br /><span>activité en 4 semaines</span>&nbsp;?</h2>
+      <p>Réservez un audit gratuit de 30 minutes. Nos experts analysent vos processus et vous proposent un plan d'action concret — sans engagement.</p>
+      <div class="cta-actions">
+        <a href="#contact" class="btn btn-teal" style="font-size:16px;padding:16px 32px;">Réserver un audit gratuit →</a>
+        <a href="#solutions" class="btn btn-outline" style="font-size:16px;padding:16px 32px;">Voir nos solutions</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ CONTACT ═══════════════ -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="contact-inner">
+      <div class="contact-left fade-up">
+        <span class="section-label">Parlons de votre projet</span>
+        <h2>Démarrons ensemble<br />votre transformation IA</h2>
+        <p>Remplissez le formulaire ci-contre ou contactez-nous directement. Notre équipe revient vers vous sous 24 heures ouvrées.</p>
+
+<div style="margin-top:32px;padding:20px;background:var(--light);border-radius:14px;border:1px solid var(--border);">
+          <div style="font-size:13px;font-weight:700;color:var(--text);margin-bottom:8px;">✅ Ce que vous obtenez gratuitement :</div>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;">
+            <li style="font-size:13px;color:var(--muted);display:flex;gap:8px;align-items:center;"><span style="color:var(--teal2);font-weight:700;">✓</span> Audit de vos processus actuels</li>
+            <li style="font-size:13px;color:var(--muted);display:flex;gap:8px;align-items:center;"><span style="color:var(--teal2);font-weight:700;">✓</span> Plan d'automatisation personnalisé</li>
+            <li style="font-size:13px;color:var(--muted);display:flex;gap:8px;align-items:center;"><span style="color:var(--teal2);font-weight:700;">✓</span> Estimation du ROI attendu</li>
+            <li style="font-size:13px;color:var(--muted);display:flex;gap:8px;align-items:center;"><span style="color:var(--teal2);font-weight:700;">✓</span> Démo en live sur vos cas d'usage</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="contact-right fade-up">
+        <div class="contact-form">
+          <div style="font-size:18px;font-weight:800;color:var(--text);margin-bottom:6px;">Demande d'audit gratuit</div>
+          <div style="font-size:13px;color:var(--muted);margin-bottom:24px;">Réponse garantie sous 24h ouvrées</div>
+
+          <form onsubmit="handleSubmit(event)">
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label">Prénom *</label>
+                <input type="text" name="prenom" class="form-input" placeholder="Jean" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Nom *</label>
+                <input type="text" name="nom" class="form-input" placeholder="Dupont" required />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Email professionnel *</label>
+              <input type="email" name="email" class="form-input" placeholder="jean.dupont@entreprise.fr" required />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Entreprise</label>
+              <input type="text" name="entreprise" class="form-input" placeholder="Votre société" />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Votre secteur *</label>
+              <select name="secteur" class="form-select" required>
+                <option value="" disabled selected>Sélectionnez votre secteur</option>
+                <option>Gestion de flotte automobile</option>
+                <option>Courtage en assurance</option>
+                <option>Transport & logistique</option>
+                <option>Autre</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Votre principal défi opérationnel</label>
+              <textarea name="defi" class="form-textarea" placeholder="Décrivez brièvement ce que vous souhaitez automatiser ou améliorer..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary form-submit">
+              Demander mon audit gratuit →
+            </button>
+
+            <p style="font-size:11px;color:var(--muted);text-align:center;margin-top:12px;">
+              En soumettant ce formulaire, vous acceptez notre politique de confidentialité. Aucun spam, uniquement de la valeur.
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ FOOTER ═══════════════ -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="brands_assets/insurfleet-logo.svg" alt="InsurFleet AI" style="height:46px;filter:brightness(0) invert(1);" />
+        <p>L'automatisation IA sur mesure pour les professionnels de la gestion de flotte et du courtage en assurance.</p>
+      </div>
+
+      <div class="footer-col">
+        <h5>Solutions</h5>
+        <ul>
+          <li><a href="#solutions">Gestion de flotte</a></li>
+          <li><a href="#solutions">Courtage en assurance</a></li>
+          <li><a href="#process">Notre méthode</a></li>
+          <li><a href="#benefits">Résultats</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Entreprise</h5>
+        <ul>
+          <li><a href="#">À propos</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Carrières</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Légal</h5>
+        <ul>
+          <li><a href="#">Politique de confidentialité</a></li>
+          <li><a href="#">Mentions légales</a></li>
+          <li><a href="#">CGU</a></li>
+          <li><a href="#">RGPD</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 InsurFleet AI. Tous droits réservés.</span>
+      <div class="footer-links">
+        <a href="#">LinkedIn</a>
+        <a href="#">Twitter</a>
+        <a href="#">GitHub</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════════════ SCRIPTS ═══════════════ -->
+<script>
+  /* Navbar scroll shadow */
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 20);
+  });
+
+  /* Mobile menu */
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  hamburger.addEventListener('click', () => {
+    mobileMenu.classList.toggle('open');
+  });
+  function closeMobile() { mobileMenu.classList.remove('open'); }
+
+  /* Tab switcher */
+  function switchTab(id, btn) {
+    document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById('tab-' + id).classList.add('active');
+    btn.classList.add('active');
+  }
+
+  /* FAQ accordion */
+  function toggleFaq(el) {
+    const item = el.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => {
+      i.classList.remove('open');
+      i.querySelector('.faq-answer').style.maxHeight = null;
+    });
+    if (!isOpen) {
+      item.classList.add('open');
+      const ans = item.querySelector('.faq-answer');
+      ans.style.maxHeight = ans.scrollHeight + 'px';
+    }
+  }
+
+  /* Intersection Observer for fade-up animations */
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+  /* Workflow card animation loop */
+  (function animateWorkflow() {
+    const active = document.getElementById('activeStep');
+    const pending = document.getElementById('pendingStep');
+    if (!active || !pending) return;
+
+    setTimeout(() => {
+      active.classList.remove('active');
+      active.classList.add('done');
+      active.querySelector('.wf-step-icon').textContent = '✓';
+
+      pending.classList.add('active');
+      pending.querySelector('.wf-step-icon').textContent = '●';
+
+      setTimeout(() => {
+        pending.classList.remove('active');
+        pending.classList.add('done');
+        pending.querySelector('.wf-step-icon').textContent = '✓';
+
+        setTimeout(() => {
+          active.classList.remove('done');
+          active.classList.add('active');
+          active.querySelector('.wf-step-icon').textContent = '●';
+          pending.classList.remove('done');
+          pending.querySelector('.wf-step-icon').textContent = '○';
+          animateWorkflow();
+        }, 2000);
+      }, 2000);
+    }, 2500);
+  })();
+
+  /* Form submission */
+  function handleSubmit(e) {
+    e.preventDefault();
+    const form = e.target;
+    const btn = form.querySelector('.form-submit');
+    btn.textContent = 'Envoi en cours...';
+    btn.disabled = true;
+    fetch('https://formspree.io/f/meellwkk', {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    }).then(res => {
+      if (res.ok) {
+        btn.textContent = '✓ Demande envoyée — nous vous recontactons sous 24h';
+        btn.style.background = '#10b981';
+        form.reset();
+      } else {
+        btn.textContent = 'Erreur — réessayez ou contactez-nous directement';
+        btn.style.background = '#ef4444';
+        btn.disabled = false;
+      }
+    }).catch(() => {
+      btn.textContent = 'Erreur — réessayez ou contactez-nous directement';
+      btn.style.background = '#ef4444';
+      btn.disabled = false;
+    });
+  }
+
+  /* Smooth scroll for anchor links */
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const id = a.getAttribute('href').slice(1);
+      const el = document.getElementById(id);
+      if (el) {
+        e.preventDefault();
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
