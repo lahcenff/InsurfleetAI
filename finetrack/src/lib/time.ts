@@ -133,7 +133,9 @@ function fromExcelSerial(n: number): Date | null {
 
 export function formatDubai(date: Date | null | undefined, locale = "en", withTime = true): string {
   if (!date) return "—";
-  return new Intl.DateTimeFormat(locale === "ar" ? "ar-AE" : "en-GB", {
+  // dd/MM/yyyy HH:mm with Latin digits in both languages: unambiguous and bidi-safe.
+  void locale;
+  return new Intl.DateTimeFormat("en-GB", {
     timeZone: DUBAI_TZ,
     year: "numeric", month: "2-digit", day: "2-digit",
     ...(withTime ? { hour: "2-digit", minute: "2-digit", hour12: false } : {}),

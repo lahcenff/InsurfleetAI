@@ -10,8 +10,9 @@
     "test": "vitest run",
     "db:push": "prisma db push",
     "db:migrate": "prisma migrate deploy",
-    "db:seed": "tsx prisma/seed.ts",
-    "postinstall": "prisma generate"
+    "db:seed": "tsx --env-file-if-exists=.env prisma/seed.ts",
+    "postinstall": "prisma generate",
+    "sample:csv": "tsx --env-file-if-exists=.env scripts/generate-sample-data.ts"
   },
   "dependencies": {
     "@prisma/client": "^6.19.3",
@@ -25,7 +26,6 @@
     "zod": "^4.6.5"
   },
   "devDependencies": {
-    "@faker-js/faker": "^10.6.0",
     "@tailwindcss/postcss": "^4.3.3",
     "@types/node": "^26.6.3",
     "@types/nodemailer": "^8.0.2",
