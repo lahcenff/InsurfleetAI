@@ -1,0 +1,308 @@
+﻿Transaction ID,Trip Date,Trip Time,Plate Source,Plate Category,Plate Number,Toll Gate,Direction,Amount (AED)
+7310002817,13/07/2026,10:40:39,Dubai,H,63661,Al Safa South,Eastbound,4.00
+7310006526,03/08/2026,10:07:42,Dubai,CC,90117,Al Mamzar North,Eastbound,4.00
+7310007286,25/08/2026,09:40:48,Abu Dhabi,5,33211,Al Mamzar South,Westbound,6.00
+7310014831,17/09/2026,00:14:47,Ajman,D,6300,Al Safa,Westbound,4.00
+7310017022,22/09/2026,06:29:31,Dubai,R,72972,Al Garhoud Bridge,Northbound,6.00
+7310018457,04/07/2026,17:48:08,Dubai,P,89819,Al Safa South,Southbound,6.00
+7310025493,03/07/2026,08:20:50,Dubai,G,36369,Business Bay Crossing,Eastbound,6.00
+7310031813,04/07/2026,16:07:19,Dubai,S,37630,Al Mamzar North,Northbound,6.00
+7310032431,06/07/2026,08:01:12,Dubai,A,76368,Al Safa South,Northbound,6.00
+7310039286,11/09/2026,17:58:22,Dubai,R,64955,Al Safa,Southbound,6.00
+7310045963,21/09/2026,10:56:37,Abu Dhabi,6,13366,Al Safa South,Eastbound,4.00
+7310052783,04/09/2026,21:26:13,Abu Dhabi,7,34275,Jebel Ali,Westbound,4.00
+7310058383,21/08/2026,23:59:26,Dubai,T,21698,Jebel Ali,Northbound,4.00
+7310066225,30/08/2026,09:20:28,Dubai,D,14272,Al Barsha,Eastbound,4.00
+7310066316,07/09/2026,07:00:18,Dubai,G,34793,Jebel Ali,Southbound,6.00
+7310074508,06/09/2026,13:53:37,Dubai,G,19078,Al Mamzar South,Southbound,4.00
+7310077642,26/08/2026,19:36:19,Dubai,AA,52508,Business Bay Crossing,Westbound,6.00
+7310083300,13/09/2026,19:41:56,Dubai,D,99416,Jebel Ali,Eastbound,4.00
+7310090966,06/08/2026,16:14:33,Dubai,N,92450,Business Bay Crossing,Northbound,6.00
+7310099185,02/07/2026,15:40:27,Dubai,T,21698,Al Maktoum Bridge,Westbound,4.00
+7310101952,16/07/2026,15:07:58,Sharjah,1,86895,Airport Tunnel,Northbound,4.00
+7310102592,18/08/2026,14:24:11,Sharjah,3,45560,Al Barsha,Eastbound,4.00
+7310110799,26/07/2026,07:17:37,Dubai,P,89819,Jebel Ali,Northbound,4.00
+7310117145,22/09/2026,07:45:16,Dubai,N,50346,Business Bay Crossing,Eastbound,6.00
+7310119096,28/08/2026,16:22:13,Dubai,AA,52508,Al Safa South,Eastbound,6.00
+7310124544,18/09/2026,18:29:31,Dubai,N,92450,Al Safa South,Northbound,6.00
+7310131588,18/08/2026,13:24:17,Dubai,L,82812,Al Garhoud Bridge,Southbound,4.00
+7310135817,24/08/2026,11:57:10,Dubai,M,83970,Al Barsha,Northbound,4.00
+7310140618,31/07/2026,09:25:29,Dubai,S,87283,Al Maktoum Bridge,Southbound,6.00
+7310148138,10/07/2026,19:37:24,Dubai,N,50346,Airport Tunnel,Northbound,6.00
+7310150373,01/09/2026,17:04:35,Dubai,N,50346,Al Barsha,Westbound,6.00
+7310156032,02/09/2026,19:49:59,Sharjah,3,49707,Al Safa South,Southbound,6.00
+7310162519,30/07/2026,18:20:01,Dubai,CC,90117,Jebel Ali,Northbound,6.00
+7310163084,26/09/2026,14:54:16,Abu Dhabi,5,33211,Al Garhoud Bridge,Northbound,4.00
+7310171771,18/07/2026,21:26:01,Sharjah,3,21632,Al Maktoum Bridge,Northbound,4.00
+7310176053,28/06/2026,22:28:06,Dubai,S,37630,Al Mamzar South,Northbound,4.00
+7310177623,18/08/2026,16:32:33,Dubai,D,57393,Business Bay Crossing,Northbound,6.00
+7310183962,29/07/2026,09:10:36,Dubai,CC,90117,Al Mamzar South,Eastbound,6.00
+7310186686,23/07/2026,09:14:40,Sharjah,3,45560,Al Mamzar North,Southbound,6.00
+7310190033,23/08/2026,21:35:55,Ajman,C,67989,Al Barsha,Westbound,4.00
+7310195423,06/09/2026,17:13:56,Dubai,R,72377,Al Maktoum Bridge,Westbound,4.00
+7310197085,29/08/2026,13:15:50,Abu Dhabi,5,33211,Al Mamzar South,Northbound,4.00
+7310204416,15/07/2026,00:14:39,Sharjah,3,45560,Business Bay Crossing,Southbound,4.00
+7310206275,09/07/2026,17:04:12,Abu Dhabi,11,61476,Business Bay Crossing,Southbound,6.00
+7310207338,03/07/2026,19:18:04,Dubai,K,21825,Al Mamzar North,Eastbound,6.00
+7310215596,22/09/2026,08:02:38,Dubai,A,76368,Airport Tunnel,Northbound,6.00
+7310223609,29/06/2026,08:39:55,Dubai,G,36369,Jebel Ali,Southbound,6.00
+7310232034,24/08/2026,21:07:39,Dubai,D,57393,Al Barsha,Northbound,4.00
+7310236342,15/08/2026,17:53:40,Dubai,H,63661,Al Safa,Westbound,6.00
+7310240743,19/09/2026,07:26:38,Dubai,C,25375,Al Safa South,Eastbound,6.00
+7310241718,26/09/2026,09:56:57,Dubai,F,15560,Al Mamzar North,Northbound,6.00
+7310246076,02/09/2026,17:00:38,Dubai,M,83970,Al Mamzar North,Southbound,6.00
+7310249330,19/08/2026,06:07:46,Sharjah,3,45560,Al Safa,Southbound,6.00
+7310252005,22/09/2026,21:47:10,Dubai,L,82812,Al Mamzar South,Northbound,4.00
+7310258948,14/08/2026,15:34:28,Dubai,A,14625,Al Barsha,Southbound,4.00
+7310263755,11/07/2026,14:57:48,Dubai,CC,90117,Business Bay Crossing,Eastbound,4.00
+7310270327,09/08/2026,19:42:28,Ajman,D,6300,Jebel Ali,Southbound,4.00
+7310271075,29/08/2026,22:53:53,Sharjah,3,49707,Al Barsha,Eastbound,4.00
+7310274290,13/07/2026,20:18:58,Dubai,S,87283,Al Mamzar South,Northbound,4.00
+7310282256,29/08/2026,11:49:24,Dubai,BB,48802,Al Mamzar South,Eastbound,4.00
+7310283358,04/07/2026,17:34:25,Dubai,G,19078,Business Bay Crossing,Westbound,6.00
+7310287875,22/07/2026,12:11:29,Dubai,H,63661,Al Mamzar South,Eastbound,4.00
+7310295336,06/09/2026,07:54:33,Abu Dhabi,12,21561,Al Barsha,Eastbound,4.00
+7310299731,15/08/2026,22:28:20,Dubai,M,83970,Al Garhoud Bridge,Northbound,4.00
+7310307629,18/07/2026,15:28:02,Dubai,R,72377,Al Mamzar North,Southbound,4.00
+7310310131,29/06/2026,18:58:07,Dubai,S,37630,Al Safa South,Eastbound,6.00
+7310318272,08/08/2026,17:26:21,Abu Dhabi,12,21561,Al Mamzar North,Northbound,6.00
+7310325593,03/08/2026,17:49:54,Abu Dhabi,14,91350,Al Mamzar North,Southbound,6.00
+7310326841,01/07/2026,08:01:44,Dubai,H,63661,Jebel Ali,Eastbound,6.00
+7310333672,16/09/2026,22:41:20,Ajman,D,6300,Al Mamzar North,Eastbound,4.00
+7310337303,30/06/2026,17:37:41,Dubai,S,37630,Al Barsha,Northbound,6.00
+7310344698,09/08/2026,15:54:30,Dubai,G,19078,Al Maktoum Bridge,Westbound,4.00
+7310352407,16/07/2026,08:27:15,Abu Dhabi,7,34275,Jebel Ali,Eastbound,6.00
+7310357298,23/07/2026,21:47:30,Dubai,D,57393,Al Barsha,Southbound,4.00
+7310361056,14/08/2026,08:44:10,Dubai,N,92450,Al Garhoud Bridge,Northbound,6.00
+7310367405,04/08/2026,13:28:52,Dubai,P,89819,Business Bay Crossing,Eastbound,4.00
+7310374175,10/09/2026,08:54:12,Abu Dhabi,11,61476,Al Maktoum Bridge,Northbound,6.00
+7310380026,25/09/2026,13:09:32,Dubai,R,64955,Al Safa,Southbound,4.00
+7310384368,06/07/2026,20:03:00,Dubai,P,89819,Jebel Ali,Southbound,4.00
+7310384879,18/09/2026,17:31:58,Abu Dhabi,11,61476,Business Bay Crossing,Northbound,6.00
+7310386603,20/07/2026,07:16:56,Sharjah,1,86895,Al Barsha,Southbound,6.00
+7310388117,25/09/2026,18:05:02,Dubai,A,76368,Al Safa South,Westbound,6.00
+7310394123,18/07/2026,17:15:35,Dubai,T,21698,Airport Tunnel,Eastbound,6.00
+7310398313,09/09/2026,13:45:49,Dubai,B,11425,Al Safa South,Southbound,4.00
+7310404935,06/08/2026,09:11:13,Dubai,P,89819,Al Garhoud Bridge,Eastbound,6.00
+7310406681,24/07/2026,13:59:49,Dubai,P,89819,Al Mamzar South,Eastbound,4.00
+7310413966,23/09/2026,13:48:56,Abu Dhabi,14,22868,Al Safa South,Southbound,4.00
+7310422547,11/07/2026,22:01:59,Abu Dhabi,12,21561,Al Maktoum Bridge,Southbound,4.00
+7310428823,18/08/2026,22:27:56,Sharjah,3,21632,Al Garhoud Bridge,Eastbound,4.00
+7310437628,05/07/2026,18:30:57,Sharjah,1,86895,Al Maktoum Bridge,Westbound,4.00
+7310446296,27/07/2026,20:54:21,Dubai,C,25375,Al Mamzar North,Southbound,4.00
+7310453486,29/06/2026,12:37:19,Dubai,AA,14608,Al Safa South,Northbound,4.00
+7310458472,05/09/2026,18:29:14,Abu Dhabi,11,61476,Al Maktoum Bridge,Southbound,6.00
+7310466162,25/09/2026,09:21:57,Dubai,Q,48213,Al Mamzar South,Southbound,6.00
+7310471459,31/08/2026,08:07:52,Dubai,G,19078,Al Safa,Westbound,6.00
+7310472168,02/08/2026,20:05:18,Dubai,P,89819,Airport Tunnel,Southbound,4.00
+7310472301,21/09/2026,08:53:58,Dubai,T,91429,Airport Tunnel,Westbound,6.00
+7310477665,28/06/2026,09:56:31,Dubai,M,83970,Airport Tunnel,Eastbound,4.00
+7310483759,26/08/2026,07:43:26,Ajman,C,67989,Jebel Ali,Eastbound,6.00
+7310484202,05/07/2026,13:00:24,Dubai,CC,90117,Al Barsha,Westbound,4.00
+7310486541,11/07/2026,08:04:57,Sharjah,3,22019,Al Mamzar South,Southbound,6.00
+7310495319,26/09/2026,18:56:20,Dubai,P,90960,Al Mamzar South,Westbound,6.00
+7310497147,10/08/2026,11:40:30,Dubai,F,15560,Al Mamzar North,Eastbound,4.00
+7310504467,25/08/2026,08:49:31,Dubai,C,25375,Al Barsha,Northbound,6.00
+7310512303,25/09/2026,20:41:51,Dubai,G,36369,Al Mamzar North,Eastbound,4.00
+7310520212,26/09/2026,17:14:49,Sharjah,3,49707,Airport Tunnel,Northbound,6.00
+7310521601,22/08/2026,12:52:31,Dubai,D,99416,Al Maktoum Bridge,Northbound,4.00
+7310525509,31/07/2026,16:18:13,Abu Dhabi,14,22868,Airport Tunnel,Northbound,6.00
+7310525692,28/07/2026,11:26:33,Sharjah,3,45560,Jebel Ali,Westbound,4.00
+7310530683,18/09/2026,08:26:58,Dubai,A,76368,Jebel Ali,Eastbound,6.00
+7310537430,22/09/2026,19:26:51,Dubai,A,14625,Al Mamzar North,Westbound,6.00
+7310539343,18/08/2026,07:41:47,Dubai,G,36369,Al Safa,Northbound,6.00
+7310544925,29/08/2026,07:50:46,Abu Dhabi,7,44006,Al Maktoum Bridge,Eastbound,6.00
+7310548604,23/08/2026,14:54:42,Dubai,L,82812,Al Mamzar South,Westbound,4.00
+7310555399,28/06/2026,09:04:44,Dubai,C,25375,Al Safa South,Westbound,4.00
+7310563276,13/07/2026,23:07:35,Ajman,D,6300,Airport Tunnel,Eastbound,4.00
+7310570412,30/06/2026,19:00:07,Dubai,A,14625,Al Barsha,Southbound,6.00
+7310573805,03/08/2026,23:56:56,Dubai,R,72972,Al Maktoum Bridge,Eastbound,4.00
+7310582207,22/09/2026,18:06:22,Dubai,M,12441,Airport Tunnel,Eastbound,6.00
+7310589392,09/09/2026,10:53:47,Dubai,N,92450,Al Maktoum Bridge,Northbound,4.00
+7310594247,11/09/2026,18:43:54,Abu Dhabi,5,33211,Al Mamzar North,Northbound,6.00
+7310596813,17/07/2026,18:07:43,Dubai,P,90960,Al Mamzar South,Northbound,6.00
+7310602519,12/07/2026,12:00:06,Dubai,P,89819,Business Bay Crossing,Eastbound,4.00
+7310605877,02/09/2026,08:35:56,Dubai,F,15560,Jebel Ali,Eastbound,6.00
+7310614086,20/07/2026,08:58:19,Dubai,D,57393,Al Safa South,Westbound,6.00
+7310618083,01/09/2026,08:21:17,Dubai,M,7741,Al Mamzar North,Westbound,6.00
+7310619359,12/09/2026,15:00:35,Abu Dhabi,14,91350,Al Mamzar South,Southbound,4.00
+7310627266,26/09/2026,17:07:28,Abu Dhabi,11,61476,Al Safa South,Westbound,6.00
+7310632727,27/08/2026,10:00:08,Dubai,M,83970,Business Bay Crossing,Eastbound,4.00
+7310639327,05/07/2026,16:14:59,Dubai,S,37630,Al Safa South,Eastbound,4.00
+7310646193,01/08/2026,16:35:16,Dubai,M,7741,Jebel Ali,Eastbound,6.00
+7310650088,27/08/2026,15:28:33,Dubai,C,25375,Business Bay Crossing,Northbound,4.00
+7310650491,27/08/2026,14:28:46,Abu Dhabi,11,61476,Al Safa South,Northbound,4.00
+7310651392,28/06/2026,17:14:32,Dubai,D,99416,Al Safa South,Eastbound,4.00
+7310655292,28/07/2026,10:14:52,Dubai,S,87283,Airport Tunnel,Eastbound,4.00
+7310660800,09/08/2026,16:39:49,Dubai,CC,90117,Business Bay Crossing,Southbound,4.00
+7310660908,30/07/2026,13:54:05,Dubai,P,89819,Business Bay Crossing,Northbound,4.00
+7310661409,01/09/2026,22:36:38,Dubai,AA,14608,Jebel Ali,Eastbound,4.00
+7310667745,10/08/2026,07:29:41,Dubai,K,21825,Business Bay Crossing,Eastbound,6.00
+7310673771,04/07/2026,15:53:16,Dubai,P,89819,Al Mamzar North,Eastbound,4.00
+7310681700,16/08/2026,16:49:39,Dubai,G,34793,Al Barsha,Eastbound,4.00
+7310682302,15/09/2026,14:46:17,Dubai,M,12441,Al Maktoum Bridge,Southbound,4.00
+7310682437,14/08/2026,07:56:00,Dubai,D,99416,Airport Tunnel,Westbound,6.00
+7310685163,12/07/2026,23:11:43,Dubai,D,99416,Business Bay Crossing,Eastbound,4.00
+7310686440,13/07/2026,17:09:35,Dubai,BB,28808,Al Garhoud Bridge,Northbound,6.00
+7310688213,02/08/2026,11:49:30,Dubai,C,68919,Al Maktoum Bridge,Eastbound,4.00
+7310689352,03/07/2026,07:05:42,Dubai,D,14272,Al Mamzar North,Southbound,6.00
+7310691607,05/08/2026,14:42:13,Dubai,AA,14608,Al Safa,Southbound,4.00
+7310698390,17/08/2026,13:18:51,Dubai,C,68919,Al Mamzar North,Southbound,4.00
+7310704961,01/09/2026,16:48:16,Dubai,L,82812,Al Mamzar South,Southbound,6.00
+7310706649,07/09/2026,16:34:42,Dubai,M,83970,Al Mamzar North,Northbound,6.00
+7310715572,11/08/2026,11:22:13,Dubai,S,87283,Al Safa South,Northbound,4.00
+7310716216,03/08/2026,19:32:02,Dubai,R,64955,Al Garhoud Bridge,Northbound,6.00
+7310724758,18/08/2026,18:10:33,Abu Dhabi,7,34275,Al Maktoum Bridge,Eastbound,6.00
+7310732416,29/07/2026,06:32:21,Dubai,D,57393,Al Garhoud Bridge,Westbound,6.00
+7310738025,21/08/2026,21:26:58,Abu Dhabi,12,21561,Business Bay Crossing,Westbound,4.00
+7310743544,02/09/2026,18:18:24,Dubai,R,72972,Al Safa South,Eastbound,6.00
+7310749085,10/07/2026,18:14:58,Dubai,BB,48802,Al Barsha,Southbound,6.00
+7310756953,18/07/2026,16:42:08,Dubai,M,7741,Al Barsha,Northbound,6.00
+7310757185,24/07/2026,19:49:18,Dubai,BB,35042,Al Safa,Southbound,6.00
+7310760323,27/07/2026,14:58:31,Dubai,R,64955,Al Maktoum Bridge,Southbound,4.00
+7310764179,22/09/2026,13:41:29,Dubai,AA,52508,Al Safa,Westbound,4.00
+7310767233,06/09/2026,23:42:02,Abu Dhabi,7,44006,Al Safa,Eastbound,4.00
+7310769633,27/07/2026,11:45:45,Abu Dhabi,5,33211,Jebel Ali,Eastbound,4.00
+7310772613,08/07/2026,15:25:13,Dubai,P,90960,Al Garhoud Bridge,Eastbound,4.00
+7310778730,31/07/2026,21:59:49,Dubai,P,90960,Al Safa,Eastbound,4.00
+7310786712,29/06/2026,07:59:39,Dubai,A,14625,Airport Tunnel,Westbound,6.00
+7310789595,01/07/2026,09:12:27,Sharjah,3,49707,Al Safa South,Southbound,6.00
+7310796097,15/08/2026,17:32:26,Dubai,M,83970,Al Safa,Westbound,6.00
+7310799141,06/07/2026,07:21:39,Dubai,D,57393,Al Barsha,Northbound,6.00
+7310807128,09/08/2026,12:35:17,Dubai,L,82812,Business Bay Crossing,Southbound,4.00
+7310813215,26/09/2026,12:08:29,Dubai,G,34793,Al Garhoud Bridge,Southbound,4.00
+7310822102,03/07/2026,07:27:35,Dubai,R,64955,Airport Tunnel,Southbound,6.00
+7310823814,23/08/2026,12:43:33,Dubai,D,14272,Business Bay Crossing,Northbound,4.00
+7310829621,22/09/2026,08:28:46,Dubai,BB,35042,Al Safa,Eastbound,6.00
+7310836925,15/08/2026,00:50:12,Dubai,F,15560,Al Maktoum Bridge,Northbound,4.00
+7310837580,28/06/2026,16:32:57,Dubai,B,11425,Al Mamzar North,Northbound,4.00
+7310841424,30/06/2026,14:48:45,Dubai,M,7741,Airport Tunnel,Northbound,4.00
+7310846005,25/07/2026,08:44:06,Abu Dhabi,7,44006,Al Mamzar South,Eastbound,6.00
+7310854025,18/07/2026,19:34:27,Dubai,AA,52508,Al Mamzar North,Westbound,6.00
+7310854168,08/08/2026,19:21:08,Abu Dhabi,11,61476,Al Garhoud Bridge,Southbound,6.00
+7310859828,24/07/2026,19:28:42,Dubai,N,92450,Al Safa,Eastbound,6.00
+7310861990,24/08/2026,23:56:31,Dubai,AA,52508,Al Maktoum Bridge,Westbound,4.00
+7310865185,30/07/2026,22:14:59,Dubai,F,15560,Al Mamzar South,Westbound,4.00
+7310866068,22/08/2026,15:38:27,Dubai,C,25375,Airport Tunnel,Eastbound,4.00
+7310866891,22/07/2026,22:26:38,Abu Dhabi,14,91350,Al Safa,Westbound,4.00
+7310869734,15/08/2026,08:06:14,Dubai,A,76368,Al Barsha,Southbound,6.00
+7310872033,09/07/2026,07:46:02,Abu Dhabi,7,34275,Business Bay Crossing,Northbound,6.00
+7310877525,16/08/2026,19:28:53,Dubai,B,11425,Al Mamzar South,Southbound,4.00
+7310880710,28/06/2026,15:00:40,Dubai,AA,14608,Business Bay Crossing,Southbound,4.00
+7310882967,14/07/2026,17:53:17,Sharjah,1,86895,Al Mamzar South,Southbound,6.00
+7310888606,09/08/2026,14:42:24,Dubai,B,11425,Al Maktoum Bridge,Westbound,4.00
+7310891728,16/07/2026,09:56:57,Abu Dhabi,7,34275,Business Bay Crossing,Eastbound,6.00
+7310891860,08/07/2026,18:04:07,Abu Dhabi,12,21561,Al Mamzar North,Westbound,6.00
+7310895879,13/07/2026,18:47:37,Dubai,N,92450,Al Barsha,Southbound,6.00
+7310901769,22/08/2026,09:49:02,Dubai,P,90960,Business Bay Crossing,Southbound,6.00
+7310906147,05/08/2026,13:00:58,Ajman,C,67989,Al Barsha,Northbound,4.00
+7310912846,07/08/2026,07:25:58,Dubai,T,21698,Al Safa South,Northbound,6.00
+7310913702,17/07/2026,20:49:00,Abu Dhabi,7,44006,Al Mamzar South,Southbound,4.00
+7310917838,29/06/2026,06:00:17,Dubai,C,68919,Airport Tunnel,Eastbound,6.00
+7310918583,28/06/2026,18:07:56,Abu Dhabi,12,21561,Al Safa,Southbound,4.00
+7310926698,07/07/2026,10:38:37,Dubai,R,72972,Al Barsha,Westbound,4.00
+7310934671,21/09/2026,16:07:44,Dubai,BB,48802,Al Safa South,Southbound,6.00
+7310940953,19/09/2026,18:52:45,Dubai,K,21825,Al Garhoud Bridge,Westbound,6.00
+7310944080,12/08/2026,09:06:35,Abu Dhabi,5,33211,Business Bay Crossing,Southbound,6.00
+7310944960,28/06/2026,07:05:17,Dubai,BB,28808,Al Barsha,Southbound,4.00
+7310949956,30/08/2026,19:53:01,Dubai,B,11425,Al Safa South,Eastbound,4.00
+7310953954,18/09/2026,07:57:20,Ajman,C,67989,Al Barsha,Westbound,6.00
+7310956276,06/09/2026,10:19:34,Dubai,Q,48213,Al Safa South,Eastbound,4.00
+7310960367,01/07/2026,11:15:32,Dubai,F,15560,Airport Tunnel,Westbound,4.00
+7310965673,06/09/2026,13:48:38,Ajman,C,67989,Jebel Ali,Eastbound,4.00
+7310968660,13/08/2026,11:21:23,Dubai,T,21698,Al Mamzar South,Southbound,4.00
+7310975531,18/09/2026,15:32:26,Dubai,L,82812,Al Garhoud Bridge,Northbound,4.00
+7310981937,26/07/2026,20:23:04,Dubai,A,14625,Al Barsha,Eastbound,4.00
+7310988268,31/08/2026,18:48:00,Abu Dhabi,7,34275,Business Bay Crossing,Northbound,6.00
+7310993228,11/09/2026,17:31:57,Sharjah,1,86895,Al Mamzar South,Southbound,6.00
+7310994983,11/09/2026,10:59:51,Dubai,G,34793,Al Mamzar North,Westbound,4.00
+7310999836,22/09/2026,16:42:57,Dubai,N,50346,Al Maktoum Bridge,Westbound,6.00
+7311006943,21/09/2026,08:01:50,Dubai,B,11425,Al Mamzar South,Eastbound,6.00
+7311015068,06/08/2026,12:08:10,Dubai,C,68919,Al Mamzar North,Northbound,4.00
+7311018895,21/07/2026,15:38:39,Dubai,P,89819,Al Safa South,Northbound,4.00
+7311020705,10/07/2026,06:50:02,Dubai,M,83970,Airport Tunnel,Eastbound,6.00
+7311024078,07/07/2026,09:06:47,Dubai,P,89819,Business Bay Crossing,Westbound,6.00
+7311029580,19/08/2026,16:03:03,Ajman,C,67989,Airport Tunnel,Northbound,6.00
+7311033525,03/07/2026,09:14:49,Dubai,L,82812,Al Barsha,Southbound,6.00
+7311038837,24/07/2026,09:07:11,Dubai,BB,28808,Al Safa South,Northbound,6.00
+7311044727,24/08/2026,08:30:03,Sharjah,3,21632,Al Mamzar North,Southbound,6.00
+7311049789,02/09/2026,09:00:36,Dubai,BB,35042,Al Barsha,Westbound,6.00
+7311054084,19/07/2026,16:22:27,Dubai,G,36369,Al Maktoum Bridge,Eastbound,4.00
+7311057610,09/08/2026,17:48:20,Dubai,C,68919,Al Safa South,Northbound,4.00
+7311060498,07/08/2026,09:50:42,Ajman,D,6300,Al Maktoum Bridge,Eastbound,6.00
+7311063686,01/09/2026,21:25:32,Dubai,M,83970,Airport Tunnel,Westbound,4.00
+7311065198,04/08/2026,18:38:59,Dubai,P,90960,Airport Tunnel,Northbound,6.00
+7311071298,18/08/2026,16:12:05,Sharjah,1,86895,Al Mamzar South,Eastbound,6.00
+7311073687,25/09/2026,16:32:02,Dubai,K,21825,Airport Tunnel,Northbound,6.00
+7311076540,22/09/2026,21:37:19,Dubai,R,72972,Al Maktoum Bridge,Eastbound,4.00
+7311083642,03/08/2026,18:29:24,Sharjah,3,45560,Business Bay Crossing,Eastbound,6.00
+7311084165,11/09/2026,18:50:00,Dubai,P,90960,Al Barsha,Westbound,6.00
+7311088778,31/07/2026,08:53:04,Dubai,F,68112,Business Bay Crossing,Eastbound,6.00
+7311097776,18/07/2026,14:50:44,Dubai,F,68112,Al Safa South,Northbound,4.00
+7311101001,13/08/2026,21:21:59,Dubai,A,14625,Al Barsha,Northbound,4.00
+7311109278,03/07/2026,19:55:45,Dubai,S,37630,Al Garhoud Bridge,Northbound,6.00
+7311112886,03/08/2026,18:59:52,Abu Dhabi,7,44006,Jebel Ali,Eastbound,6.00
+7311121495,05/07/2026,14:41:39,Dubai,N,50346,Airport Tunnel,Southbound,4.00
+7311129688,26/09/2026,17:00:14,Dubai,BB,28808,Al Mamzar South,Northbound,6.00
+7311136981,08/08/2026,16:05:16,Dubai,K,21825,Al Mamzar South,Westbound,6.00
+7311140499,03/07/2026,00:56:56,Dubai,K,21825,Al Safa South,Northbound,4.00
+7311141417,22/07/2026,17:41:13,Abu Dhabi,11,61476,Airport Tunnel,Westbound,6.00
+7311148735,02/09/2026,06:39:43,Dubai,S,37630,Al Maktoum Bridge,Westbound,6.00
+7311150488,20/09/2026,16:34:15,Dubai,G,50478,Al Mamzar South,Eastbound,4.00
+7311158179,26/09/2026,19:59:56,Dubai,A,76368,Jebel Ali,Southbound,6.00
+7311161008,26/09/2026,08:08:40,Dubai,BB,48802,Al Maktoum Bridge,Eastbound,6.00
+7311163941,21/09/2026,19:47:32,Dubai,T,91429,Al Mamzar South,Westbound,6.00
+7311168925,18/07/2026,19:07:39,Dubai,D,99416,Al Garhoud Bridge,Southbound,6.00
+7311170082,16/08/2026,10:14:43,Dubai,G,36369,Al Garhoud Bridge,Southbound,4.00
+7311176701,13/08/2026,17:40:32,Dubai,K,21825,Al Barsha,Eastbound,6.00
+7311179583,16/09/2026,13:56:10,Dubai,G,34793,Al Barsha,Southbound,4.00
+7311186898,06/07/2026,16:01:36,Dubai,G,19078,Al Mamzar North,Southbound,6.00
+7311186993,12/07/2026,12:18:09,Dubai,AA,14608,Airport Tunnel,Southbound,4.00
+7311194886,02/08/2026,17:08:44,Abu Dhabi,12,21561,Al Mamzar South,Southbound,4.00
+7311196380,06/09/2026,12:09:34,Dubai,R,72377,Al Safa South,Northbound,4.00
+7311201854,14/08/2026,20:00:24,Dubai,N,92450,Jebel Ali,Northbound,4.00
+7311203827,26/09/2026,19:40:57,Dubai,D,14272,Business Bay Crossing,Southbound,6.00
+7311204692,27/07/2026,20:41:30,Abu Dhabi,14,22868,Jebel Ali,Eastbound,4.00
+7311210124,03/07/2026,16:22:26,Dubai,D,99416,Jebel Ali,Northbound,6.00
+7311213290,02/09/2026,11:26:52,Dubai,R,72377,Al Maktoum Bridge,Southbound,4.00
+7311218829,23/08/2026,15:12:54,Abu Dhabi,11,61476,Al Mamzar South,Eastbound,4.00
+7311224753,17/08/2026,23:07:36,Dubai,CC,90117,Airport Tunnel,Westbound,4.00
+7311225756,02/07/2026,16:00:08,Dubai,D,99416,Al Safa,Northbound,6.00
+7311228318,06/09/2026,08:28:50,Dubai,F,15560,Al Mamzar South,Northbound,4.00
+7311236841,09/07/2026,14:13:17,Dubai,S,87283,Al Maktoum Bridge,Westbound,4.00
+7311241171,24/08/2026,08:14:16,Dubai,G,34793,Business Bay Crossing,Westbound,6.00
+7311241674,17/07/2026,16:48:28,Sharjah,3,22019,Al Maktoum Bridge,Northbound,6.00
+7311247140,23/09/2026,20:10:27,Abu Dhabi,6,13366,Business Bay Crossing,Westbound,4.00
+7311250901,18/09/2026,13:21:33,Dubai,A,14625,Al Garhoud Bridge,Eastbound,4.00
+7311259735,11/09/2026,23:34:28,Sharjah,3,21632,Business Bay Crossing,Eastbound,4.00
+7311267644,06/07/2026,13:35:04,Dubai,D,99416,Al Mamzar South,Westbound,4.00
+7311272438,26/09/2026,08:28:18,Dubai,R,72377,Jebel Ali,Northbound,6.00
+7311279850,29/08/2026,08:53:07,Abu Dhabi,7,34275,Al Safa South,Westbound,6.00
+7311282895,12/07/2026,09:54:48,Abu Dhabi,5,33211,Business Bay Crossing,Eastbound,4.00
+7311284685,13/09/2026,08:25:20,Dubai,F,15560,Airport Tunnel,Northbound,4.00
+7311289793,17/07/2026,13:25:17,Dubai,L,82812,Al Mamzar North,Northbound,4.00
+7311295465,25/08/2026,07:43:02,Abu Dhabi,5,33211,Airport Tunnel,Southbound,6.00
+7311302628,28/06/2026,19:33:37,Dubai,B,11425,Jebel Ali,Southbound,4.00
+7311309475,13/08/2026,08:18:22,Dubai,S,87283,Al Mamzar North,Southbound,6.00
+7311316883,02/08/2026,18:42:46,Dubai,F,68112,Al Garhoud Bridge,Northbound,4.00
+7311321952,21/07/2026,19:55:57,Dubai,D,57393,Al Barsha,Eastbound,6.00
+7311329940,27/07/2026,10:21:47,Dubai,N,92450,Al Garhoud Bridge,Southbound,4.00
+7311334875,28/06/2026,16:08:27,Dubai,B,11425,Al Garhoud Bridge,Westbound,4.00
+7311337281,28/06/2026,10:31:20,Abu Dhabi,14,91350,Al Barsha,Northbound,4.00
+7311345572,13/08/2026,17:41:04,Dubai,C,68919,Business Bay Crossing,Eastbound,6.00
+7311353077,09/07/2026,06:07:31,Dubai,D,99416,Al Maktoum Bridge,Eastbound,6.00
+7311357846,12/08/2026,12:59:04,Dubai,S,87283,Business Bay Crossing,Northbound,4.00
+7311358150,24/09/2026,20:21:04,Sharjah,3,22019,Al Garhoud Bridge,Westbound,4.00
+7311365325,04/07/2026,07:45:47,Dubai,S,87283,Al Barsha,Eastbound,6.00
+7311372250,10/09/2026,21:53:59,Abu Dhabi,12,21561,Al Barsha,Westbound,4.00
+7311379103,12/09/2026,12:00:47,Abu Dhabi,11,61476,Al Barsha,Eastbound,4.00
+7311384735,14/09/2026,20:28:13,Dubai,F,68112,Jebel Ali,Eastbound,4.00
+7311388727,16/08/2026,15:09:15,Ajman,C,67989,Jebel Ali,Eastbound,4.00
+7311391797,04/09/2026,20:24:22,Abu Dhabi,6,13366,Al Garhoud Bridge,Westbound,4.00
+7311400320,01/07/2026,17:21:22,Abu Dhabi,12,21561,Al Barsha,Northbound,6.00
+7311406274,29/08/2026,09:35:59,Dubai,R,72377,Al Barsha,Northbound,6.00
+7311412866,03/07/2026,15:59:44,Abu Dhabi,11,61476,Al Mamzar North,Southbound,4.00
+7311417980,28/06/2026,16:34:47,Dubai,M,83970,Al Barsha,Southbound,4.00
+7311421376,17/07/2026,06:00:09,Dubai,R,64955,Airport Tunnel,Northbound,6.00
+7311423587,13/08/2026,18:20:51,Dubai,F,15560,Jebel Ali,Southbound,6.00
+7311430259,27/07/2026,19:56:33,Dubai,S,37630,Business Bay Crossing,Northbound,6.00

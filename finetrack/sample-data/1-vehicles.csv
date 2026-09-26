@@ -1,0 +1,51 @@
+﻿emirate,plateCode,plateNumber,make,model,year,status,externalId
+Dubai,B,11425,Nissan,Patrol,2023,ACTIVE,U-016
+Sharjah,3,45560,Toyota,Camry,2024,ACTIVE,U-046
+Dubai,M,83970,Toyota,Camry,2026,ACTIVE,U-019
+Abu Dhabi,5,33211,Nissan,Sunny,2022,ACTIVE,U-040
+Dubai,G,36369,Toyota,Corolla,2024,ACTIVE,U-013
+Dubai,P,90960,Toyota,Corolla,2025,ACTIVE,U-017
+Dubai,N,50346,MG,ZS,2025,ACTIVE,U-001
+Abu Dhabi,12,21561,Nissan,Urvan,2023,IN_MAINTENANCE,U-043
+Dubai,A,14625,Mitsubishi,Pajero,2024,ACTIVE,U-010
+Ajman,D,6300,Toyota,Corolla,2022,ACTIVE,U-049
+Dubai,T,91429,Toyota,Corolla,2023,ACTIVE,U-025
+Dubai,K,21825,MG,5,2023,ACTIVE,U-030
+Abu Dhabi,7,34275,Chevrolet,Captiva,2022,ACTIVE,U-038
+Dubai,H,63661,Nissan,Sunny,2025,ACTIVE,U-021
+Dubai,D,57393,Nissan,Sunny,2024,ACTIVE,U-002
+Dubai,N,92450,Nissan,Altima,2024,ACTIVE,U-020
+Dubai,D,14272,Hyundai,Tucson,2025,ACTIVE,U-033
+Dubai,S,87283,Mitsubishi,Attrage,2022,ACTIVE,U-012
+Dubai,AA,52508,Toyota,Hiace,2026,ACTIVE,U-003
+Dubai,R,72972,Toyota,Hiace,2023,ACTIVE,U-027
+Dubai,BB,35042,Hyundai,Tucson,2022,ACTIVE,U-018
+Abu Dhabi,14,91350,Kia,Sportage,2023,ACTIVE,U-044
+Dubai,G,34793,Nissan,Sunny,2021,ACTIVE,U-034
+Sharjah,1,86895,Mitsubishi,Attrage,2026,ACTIVE,U-045
+Abu Dhabi,11,61476,Mitsubishi,Attrage,2024,ACTIVE,U-039
+Abu Dhabi,6,13366,Nissan,Sunny,2021,ACTIVE,U-042
+Abu Dhabi,7,44006,Nissan,Altima,2025,ACTIVE,U-037
+Dubai,C,25375,Mitsubishi,Pajero,2022,ACTIVE,U-036
+Dubai,L,82812,Nissan,Sunny,2023,ACTIVE,U-009
+Dubai,M,12441,Toyota,Camry,2026,ACTIVE,U-008
+Sharjah,3,49707,MG,5,2026,ACTIVE,U-048
+Dubai,F,15560,Toyota,Land Cruiser,2025,ACTIVE,U-007
+Dubai,S,37630,Toyota,Land Cruiser,2024,ACTIVE,U-004
+Ajman,C,67989,Kia,Pegas,2026,IN_MAINTENANCE,U-050
+Dubai,D,99416,Hyundai,Accent,2026,ACTIVE,U-035
+Dubai,R,64955,Toyota,Corolla,2023,ACTIVE,U-005
+Dubai,BB,48802,Honda,Civic,2021,ACTIVE,U-015
+Dubai,C,68919,Nissan,Sunny,2022,ACTIVE,U-028
+Dubai,G,19078,Hyundai,Tucson,2022,ACTIVE,U-024
+Dubai,BB,28808,Hyundai,Accent,2023,ACTIVE,U-032
+Abu Dhabi,14,22868,Toyota,Camry,2025,ACTIVE,U-041
+Dubai,T,21698,Ford,Transit,2022,ACTIVE,U-026
+Dubai,AA,14608,Hyundai,Accent,2021,ACTIVE,U-006
+Sharjah,3,21632,Nissan,Patrol,2024,ACTIVE,U-047
+Dubai,G,50478,MG,ZS,2025,ACTIVE,U-022
+Dubai,F,68112,Toyota,Land Cruiser,2022,ACTIVE,U-011
+Dubai,R,72377,Honda,Civic,2021,ACTIVE,U-014
+Dubai,CC,90117,Nissan,Altima,2024,ACTIVE,U-023
+Dubai,P,89819,Nissan,Sunny,2025,SOLD,U-029
+Dubai,A,76368,Hyundai,Accent,2026,ACTIVE,U-031

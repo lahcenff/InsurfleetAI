@@ -1,0 +1,31 @@
+﻿type,fullName,companyName,whatsappPhone,email,licenseNumber,licenseExpiry,externalId
+DRIVER,Muhammad Asif Khan,,+971527931482,muhammad.khan@desertwheels.example,3171678,20/05/2028,EMP-101
+DRIVER,Rajesh Kumar Nair,,+971566425091,rajesh.nair@desertwheels.example,5998874,09/01/2027,EMP-102
+DRIVER,Joseph Dela Cruz,,+971585695833,joseph.cruz@desertwheels.example,7706032,15/03/2027,EMP-103
+DRIVER,Abdul Rahman Siddiqui,,+971586223270,abdul.siddiqui@desertwheels.example,3555507,22/10/2026,EMP-104
+DRIVER,Sanjay Pillai,,+971527407564,sanjay.pillai@desertwheels.example,7849013,20/10/2026,EMP-105
+DRIVER,Imran Hussain,,+971585102301,imran.hussain@desertwheels.example,2643824,26/04/2027,EMP-106
+DRIVER,Mark Anthony Reyes,,+971552695439,mark.reyes@desertwheels.example,8672493,20/04/2028,EMP-107
+DRIVER,Suresh Babu,,+971509954896,suresh.babu@desertwheels.example,2904957,26/11/2026,EMP-108
+DRIVER,Tariq Mehmood,,+971556576680,tariq.mehmood@desertwheels.example,5360812,15/11/2027,EMP-109
+DRIVER,Ahmed Fathy Mostafa,,+971509811366,ahmed.mostafa@desertwheels.example,8463112,19/05/2028,EMP-110
+DRIVER,Bilal Ahmed Qureshi,,+971525662957,bilal.qureshi@desertwheels.example,7859865,22/07/2027,EMP-111
+DRIVER,Nabin Gurung,,+971553269669,nabin.gurung@desertwheels.example,5494061,22/10/2027,EMP-112
+DRIVER,Anil Thomas Varghese,,+971584272411,anil.varghese@desertwheels.example,4834287,09/10/2026,EMP-113
+DRIVER,Kamal Uddin,,+971551368834,kamal.uddin@desertwheels.example,6992676,26/04/2027,EMP-114
+DRIVER,Ramon Santos,,+971587868691,ramon.santos@desertwheels.example,6921275,05/11/2026,EMP-115
+DRIVER,Shahid Iqbal,,+971506280059,shahid.iqbal@desertwheels.example,5940358,22/09/2028,EMP-116
+DRIVER,Vijay Menon,,+971555278475,vijay.menon@desertwheels.example,5054875,24/11/2027,EMP-117
+DRIVER,Mohamed Nasser Ali,,+971507374549,mohamed.ali@desertwheels.example,1033350,20/02/2028,EMP-118
+CUSTOMER,Khalid Al Mansoori,,+971527531951,khalid.al.mansoori@mail.example,UK35111372,08/08/2029,CUS-5001
+CUSTOMER,Fatima Al Hashimi,,,fatima.al.hashimi@mail.example,1410385,23/04/2029,CUS-5002
+CUSTOMER,James Whitfield,,+971555215101,james.whitfield@mail.example,UK20919860,07/02/2029,CUS-5003
+CUSTOMER,Priya Sharma,,+971588498100,priya.sharma@mail.example,1074322,12/09/2029,CUS-5004
+CUSTOMER,Omar Haddad,,+971555381185,omar.haddad@mail.example,UK59964174,27/06/2030,CUS-5005
+CUSTOMER,Sophie Laurent,,,sophie.laurent@mail.example,UK98579669,11/04/2029,CUS-5006
+CUSTOMER,Hassan Al Zaabi,Zaabi Contracting LLC,,hassan.al.zaabi@mail.example,UK96168485,06/10/2030,CUS-5007
+CUSTOMER,Elena Petrova,,+971509936579,elena.petrova@mail.example,5420393,01/02/2030,CUS-5008
+CUSTOMER,Daniel O'Connor,Blue Harbour Events FZ-LLC,+971563948665,daniel.o.connor@mail.example,UK50838197,05/05/2030,CUS-5009
+CUSTOMER,Aisha Rahman,,+971522405278,aisha.rahman@mail.example,7521548,15/07/2030,CUS-5010
+CUSTOMER,Youssef Benali,,+971526587958,youssef.benali@mail.example,6718841,09/01/2027,CUS-5011
+CUSTOMER,Liam Chen,Nexa Logistics DMCC,+971567655303,liam.chen@mail.example,7157209,29/09/2030,CUS-5012
